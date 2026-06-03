@@ -1,8 +1,11 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const taskSchema = new mongoose.Schema({
-  title: String,
-  status: String
-}, { timestamps: true });
+const taskSchema = new mongoose.Schema(
+  {
+    title: String,
+    status: String,
+  },
+  { timestamps: true }
+);
 
-module.exports = mongoose.model("Task", taskSchema);
+export default mongoose.model("Task", taskSchema);
